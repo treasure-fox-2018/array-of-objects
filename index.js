@@ -6,9 +6,8 @@ function createObj(name, phase, gender) {
     gender: gender,
   }
   arr.push(myObj)
-  return myObj
+  return arr
 }
-
 
 createObj('Akbar', 1, 'male')
 createObj('Icha', 1, 'female')
@@ -16,4 +15,13 @@ createObj('Adhit', 2, 'male')
 createObj('Tama', 2, 'male')
 createObj('Rifky', 3, 'male')
 
-console.log(arr)
+function getData(name) {
+  var data = arr
+  for (var a = 0; a < arr.length; a++) {
+    if (arr[a].nama === name) {
+      return arr[a]
+    }
+  }
+}
+
+console.log(getData('Icha'))
